@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "tlXnw3kxg8H87/zWcxnvX465FfHVivKZ20JRoVHdH+Lcz/9y+J6LZQ2GC2XT21H7aMSDcN27LPIJxyyV9psh0w==",
+  "success": true,
+  "projectFilePath": "C:\\projects\\Amazon\\Alexa\\AlexaPubSale\\AlexaPubSale\\AlexaPubSale.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lamth\\.nuget\\packages\\alexa.net\\1.20.0\\alexa.net.1.20.0.nupkg.sha512",
+    "C:\\Users\\lamth\\.nuget\\packages\\amazon.lambda.core\\2.1.0\\amazon.lambda.core.2.1.0.nupkg.sha512",
+    "C:\\Users\\lamth\\.nuget\\packages\\amazon.lambda.serialization.json\\2.0.0\\amazon.lambda.serialization.json.2.0.0.nupkg.sha512",
+    "C:\\Users\\lamth\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.2.0\\amazon.lambda.serialization.systemtextjson.2.2.0.nupkg.sha512",
+    "C:\\Users\\lamth\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\lamth\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\lamth\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\lamth\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9e989570-fa80-4408-bad5-0977eaace8b4": {
+      "ProjectGuid": "9e989570-fa80-4408-bad5-0977eaace8b4",
+      "DisplayName": "AlexaPubSale.Tests",
+      "ColorIndex": 0
+    },
+    "6d1c433d-f230-412e-8863-648eb2fff0cf": {
+      "ProjectGuid": "6d1c433d-f230-412e-8863-648eb2fff0cf",
+      "DisplayName": "AlexaPubSale",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

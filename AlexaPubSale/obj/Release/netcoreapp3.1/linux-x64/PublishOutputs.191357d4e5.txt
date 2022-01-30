@@ -1,0 +1,9 @@
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\AlexaPubSale.dll
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\AlexaPubSale.deps.json
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\AlexaPubSale.runtimeconfig.json
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\AlexaPubSale.pdb
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\Alexa.NET.dll
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Core.dll
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.Json.dll
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale\bin\Release\netcoreapp3.1\publish\Newtonsoft.Json.dll
