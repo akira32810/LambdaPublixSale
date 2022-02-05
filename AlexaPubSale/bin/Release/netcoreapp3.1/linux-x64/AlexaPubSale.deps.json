@@ -12,7 +12,9 @@
           "Alexa.NET": "1.20.0",
           "Amazon.Lambda.Core": "2.1.0",
           "Amazon.Lambda.Serialization.Json": "2.0.0",
-          "Amazon.Lambda.Serialization.SystemTextJson": "2.2.0"
+          "Amazon.Lambda.Serialization.SystemTextJson": "2.2.0",
+          "PhantomJS": "2.1.1",
+          "Selenium.PhantomJS.WebDriver": "2.1.1"
         },
         "runtime": {
           "AlexaPubSale.dll": {}
@@ -67,7 +69,9 @@
             "fileVersion": "12.0.2.23222"
           }
         }
-      }
+      },
+      "PhantomJS/2.1.1": {},
+      "Selenium.PhantomJS.WebDriver/2.1.1": {}
     }
   },
   "libraries": {
@@ -110,6 +114,20 @@
       "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "PhantomJS/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-31xkN06TjBGQ9/8sGkm8IAN4DM/gMDChryu9Pp1ng9OK/xLPL2ZNbAgRCaB2g9vDkUDvhHjBEtP9JRenMDiHUg==",
+      "path": "phantomjs/2.1.1",
+      "hashPath": "phantomjs.2.1.1.nupkg.sha512"
+    },
+    "Selenium.PhantomJS.WebDriver/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RkbBQqVh47WZWQjwl5iM/FFzY6ST89w9Pts31Vft36H/10gCLipRoSsM/ewkSm8EUWibagOVyAOQDqsL5RSzhw==",
+      "path": "selenium.phantomjs.webdriver/2.1.1",
+      "hashPath": "selenium.phantomjs.webdriver.2.1.1.nupkg.sha512"
     }
   }
 }

@@ -9,6 +9,9 @@ using Alexa.NET.Request.Type;
 using Newtonsoft.Json;
 using Alexa.NET;
 using System.Text.RegularExpressions;
+using System.Net;
+using System.IO;
+using System.Text;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializerAttribute(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
@@ -20,9 +23,10 @@ namespace AlexaPubSale
 
         public SkillResponse FunctionHandler(SkillRequest input, ILambdaContext context)
         {
-
+            SubSaleData.Root subsale = JsonConvert.DeserializeObject<SubSaleData.Root>(SubInfo());
             ILambdaLogger log = context.Logger;
             log.LogLine($"Skill Request Object:" + JsonConvert.SerializeObject(input));
+
 
             Session session = input.Session;
             if (session.Attributes == null)
@@ -54,17 +58,26 @@ namespace AlexaPubSale
                         }
                     case "PubSubIntent":
                         {
-                            dynamic data = JsonConvert.DeserializeObject(SubInfo(), typeof(object));
-                            string sub_name = data.products.name;
-                            string sub_recipe = data.products.sub_recipe;
-                            if (!string.IsNullOrEmpty(sub_name))
+
+                            var subsonsale = subsale.data.storeProductsSavingsSearchResult.storeProducts.Where(x => x.onSale == true);
+                            StringBuilder sb = new StringBuilder();
+                            if (subsonsale.Count() > 0)
                             {
-                                return ResponseBuilder.Tell("the current sub on sale at Publix is " + sub_name + ". The recipe " + sub_recipe);
+                                foreach (var sub in subsonsale)
+                                {
+
+                                    sb.AppendLine("the sub on sale at Publix is " + sub.title + ". The recipes include " + sub.shortDescription + ".  The price " + sub.priceLine + " and " + sub.savingLine);
+
+
+                                }
+                                return ResponseBuilder.Tell(sb.ToString());
                             }
 
                             //  return ResponseBuilder.Ask(next, rp, session);
                             else
-                                return ResponseBuilder.Tell("Sub on sale cannot be found");
+                            {
+                                return ResponseBuilder.Tell("There are no sub on sale");
+                            }
                         }
 
                     default:
@@ -84,21 +97,47 @@ namespace AlexaPubSale
         {
             string subdata = string.Empty;
 
+            var url = "https://services.publix.com/search/api/search/storeproductssavings/";
 
-            using (System.Net.WebClient client = new System.Net.WebClient())
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpRequest.Method = "POST";
+
+            httpRequest.Headers["publixstore"] = "1158";
+            httpRequest.ContentType = "application/json";
+
+            var data = @"{
+  ""operationName"": ""GetStoreProductsSavingsSearchResultAsync"",
+  ""variables"": {
+    ""take"": 30,
+    ""skip"": 0,
+    ""sortOrder"": ""featuredRank asc, titleSearch asc"",
+    ""ispu"": true,
+    ""categoryID"": ""2b88acd8-53a8-4092-b5ed-62746102e70b"",
+    ""minMatch"": 0,
+    ""boostVarIndex"": 0,
+    ""spellCheckThreshold"": -1,
+    ""wildcardSearch"": false,
+    ""isPreviewSite"": false,
+    ""pfVarIndex"": 0,
+    ""qfVarIndex"": 0,
+    ""getOrderHistory"": false
+  },
+  ""query"": ""query GetStoreProductsSavingsSearchResultAsync($keyword: String, $skip: Int!, $take: Int!, $facetOverrideStr: String, $facets: String, $sortOrder: String, $ispu: Boolean, $categoryID: String, $minMatch: Int!, $boostVarIndex: Int!, $spellCheckThreshold: Int!, $wildcardSearch: Boolean!, $isPreviewSite: Boolean!, $qfVarIndex: Int!, $pfVarIndex: Int!, $getOrderHistory: Boolean!) {\n  storeProductsSavingsSearchResult(\n    keyword: $keyword\n    skip: $skip\n    take: $take\n    facetOverrideStr: $facetOverrideStr\n    facets: $facets\n    sortOrder: $sortOrder\n    ispu: $ispu\n    categoryID: $categoryID\n    minMatch: $minMatch\n    boostVarIndex: $boostVarIndex\n    spellCheckThreshold: $spellCheckThreshold\n    wildcardSearch: $wildcardSearch\n    isPreviewSite: $isPreviewSite\n    pfVarIndex: $pfVarIndex\n    qfVarIndex: $qfVarIndex\n    getOrderHistory: $getOrderHistory\n  ) {\n    storeProducts {\n      baseProductId\n      itemCode\n      title\n      shortDescription\n      advancedNotice\n      sizeDescription\n      savingLine\n      onSale\n      priceLine\n      specialPromotionDescription\n      uiDisplayType\n      activationStatus\n      promoType\n      rss\n      imageUrls {\n        large {\n          a\n        }\n        small {\n          a\n        }\n      }\n    }\n    totalCount\n    facets {\n      DisplayName\n      Name\n      Values {\n        Value\n        Count\n        Name\n        DisplayName\n        MarketingImage\n      }\n    }\n    categories {\n      Name\n      FauxTaxonomy\n      ID\n      ProductCount\n      IsCurrentCategory\n      ImageUrl\n    }\n    parent {\n      Name\n      FauxTaxonomy\n      ID\n      IsCurrentCategory\n    }\n    topParent {\n      Name\n      FauxTaxonomy\n      ID\n      IsCurrentCategory\n    }\n    correctedSearchTerm\n  }\n}\n""
+}";
+
+            using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
             {
-                string html = client.DownloadString("https://www.publix.com/pd/BMO-DSB-100369");
-                string regexstr = "\"products\":[^}]*}";
-                Regex regex = new Regex(regexstr, RegexOptions.Singleline);
-
-                Match match = regex.Match(html);
-
-                string rawstr = match.Value;
-
-                subdata = System.Text.RegularExpressions.Regex.Unescape("{" + rawstr + "}").Replace("&#39;", "'").Replace("&amp;", "&").Trim();
-
-
+                streamWriter.Write(data);
             }
+
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                subdata= streamReader.ReadToEnd();
+            }
+
+            // Console.WriteLine(httpResponse.StatusCode);
+
 
 
             return subdata;

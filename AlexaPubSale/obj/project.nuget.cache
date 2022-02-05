@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oMM9DnK2u1Afy8MQRgI2B2cfVP3999vyJ/fpnI6/+o5J9w9G+1U7d2HxWS6egrTKHS5nzC8lJn4NMEwi7jd/TA==",
+  "dgSpecHash": "/6W0uOTH8Hjdh70Se+Q5SlGwoRBeVGVGwP2IwY3RktT6gyYLRDBoJcnxEGJ00nqdbtqxZawgUvZmds/wLL0LEw==",
   "success": true,
   "projectFilePath": "C:\\projects\\Amazon\\Alexa\\AlexaPubSale\\AlexaPubSale\\AlexaPubSale.csproj",
   "expectedPackageFiles": [
@@ -11,9 +11,9 @@
     "C:\\Users\\lamth\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\lamth\\.nuget\\packages\\phantomjs\\2.1.1\\phantomjs.2.1.1.nupkg.sha512",
     "C:\\Users\\lamth\\.nuget\\packages\\selenium.phantomjs.webdriver\\2.1.1\\selenium.phantomjs.webdriver.2.1.1.nupkg.sha512",
-    "C:\\Users\\lamth\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\lamth\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\lamth\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\lamth\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\lamth\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }
