@@ -20,5 +20,6 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">C:\Users\lamth\.nuget\packages\xunit.analyzers\0.7.0</Pkgxunit_analyzers>
+    <PkgPhantomJS Condition=" '$(PkgPhantomJS)' == '' ">C:\Users\lamth\.nuget\packages\phantomjs\2.1.1</PkgPhantomJS>
   </PropertyGroup>
 </Project>

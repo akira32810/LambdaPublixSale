@@ -10,7 +10,6 @@ using Newtonsoft.Json;
 using Alexa.NET;
 using System.Text.RegularExpressions;
 
-
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializerAttribute(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 

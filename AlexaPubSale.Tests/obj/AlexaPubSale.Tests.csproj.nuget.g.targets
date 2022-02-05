@@ -3,5 +3,7 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\15.5.0\build\netcoreapp1.0\Microsoft.Net.Test.Sdk.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\15.5.0\build\netcoreapp1.0\Microsoft.Net.Test.Sdk.targets')" />
     <Import Project="$(NuGetPackageRoot)xunit.core\2.3.1\build\xunit.core.targets" Condition="Exists('$(NuGetPackageRoot)xunit.core\2.3.1\build\xunit.core.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver.chromedriver\97.0.4692.7100\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.chromedriver\97.0.4692.7100\build\Selenium.WebDriver.ChromeDriver.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.phantomjs.webdriver\2.1.1\build\Selenium.PhantomJS.WebDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.phantomjs.webdriver\2.1.1\build\Selenium.PhantomJS.WebDriver.targets')" />
   </ImportGroup>
 </Project>

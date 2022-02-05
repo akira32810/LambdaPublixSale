@@ -59,6 +59,14 @@
             "Amazon.Lambda.Serialization.SystemTextJson": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "PhantomJS": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Selenium.PhantomJS.WebDriver": {
+              "target": "Package",
+              "version": "[2.1.1, )"
             }
           },
           "imports": [

@@ -17,7 +17,8 @@ using Newtonsoft.Json;
 
 
 using System.Text.RegularExpressions;
-using System.Net.Http;
+
+
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 
@@ -37,6 +38,20 @@ namespace AlexaPubSale.Tests
         {
             string subdata = string.Empty;
 
+            
+         
+            var url = "https://www.publix.com/pd/BMO-DSB-100369";
+            using (var client = new System.Net.Http.HttpClient())
+            {
+                client.DefaultRequestHeaders.ExpectContinue = false; //REQUIRED! or you will get 502 Bad Gateway errors
+                                                                     //you should look at the HTTP Endpoint docs, section about "userRequest" and "pageRequest" 
+                                                                     //for a listing of all the parameters you can pass via the "pageRequestJson" variable.
+                var pageRequestJson = new System.Net.Http.StringContent(@"{'url':'https://www.publix.com/pd/BMO-DSB-100369','renderType':'html','outputAsJson':false }");
+                var response = client.PostAsync("https://PhantomJScloud.com/api/browser/v2/ak-rk23p-6b70f-7ywc9-0edq9-5e889/", pageRequestJson).Result;
+                var responseString = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine("*** HTTP Request Finish ***");
+                Console.WriteLine(responseString);
+            }
 
             using (System.Net.WebClient client = new System.Net.WebClient())
             {

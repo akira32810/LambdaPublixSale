@@ -6,7 +6,9 @@ C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\AlexaPubSale.Tests.runtimeconfig.dev.json
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\AlexaPubSale.Tests.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\AlexaPubSale.Tests.pdb
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Alexa.NET.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Amazon.Lambda.Core.dll
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Amazon.Lambda.Serialization.Json.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Amazon.Lambda.Serialization.SystemTextJson.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Amazon.Lambda.TestUtilities.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
@@ -20,6 +22,7 @@ C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\testhost.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\WebDriver.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\xunit.assert.dll
@@ -101,5 +104,3 @@ C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\obj\Debug\netcoreapp3.1
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\obj\Debug\netcoreapp3.1\AlexaPubSale.Tests.dll
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\obj\Debug\netcoreapp3.1\AlexaPubSale.Tests.pdb
 C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\obj\Debug\netcoreapp3.1\AlexaPubSale.Tests.genruntimeconfig.cache
-C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\Alexa.NET.dll
-C:\projects\Amazon\Alexa\AlexaPubSale\AlexaPubSale.Tests\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll

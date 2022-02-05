@@ -23,6 +23,19 @@
           "lib/netstandard2.0/Amazon.Lambda.Core.dll": {}
         }
       },
+      "Amazon.Lambda.Serialization.Json/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Amazon.Lambda.Core": "2.0.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll": {}
+        }
+      },
       "Amazon.Lambda.Serialization.SystemTextJson/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -457,7 +470,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -465,6 +478,9 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "PhantomJS/2.1.1": {
+        "type": "package"
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
@@ -635,6 +651,30 @@
             "assetType": "native",
             "rid": "ubuntu.16.10-x64"
           }
+        }
+      },
+      "Selenium.PhantomJS.WebDriver/2.1.1": {
+        "type": "package",
+        "build": {
+          "build/Selenium.PhantomJS.WebDriver.targets": {}
+        }
+      },
+      "Selenium.WebDriver/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.1/WebDriver.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/97.0.4692.7100": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -2118,7 +2158,10 @@
         "dependencies": {
           "Alexa.NET": "1.20.0",
           "Amazon.Lambda.Core": "2.1.0",
-          "Amazon.Lambda.Serialization.SystemTextJson": "2.2.0"
+          "Amazon.Lambda.Serialization.Json": "2.0.0",
+          "Amazon.Lambda.Serialization.SystemTextJson": "2.2.0",
+          "PhantomJS": "2.1.1",
+          "Selenium.PhantomJS.WebDriver": "2.1.1"
         },
         "compile": {
           "bin/placeholder/AlexaPubSale.dll": {}
@@ -2158,6 +2201,19 @@
         "lib/net6.0/Amazon.Lambda.Core.xml",
         "lib/netstandard2.0/Amazon.Lambda.Core.dll",
         "lib/netstandard2.0/Amazon.Lambda.Core.xml"
+      ]
+    },
+    "Amazon.Lambda.Serialization.Json/2.0.0": {
+      "sha512": "+V9hxN31I/B0zAEMt/Ld5cU2CWnCS+Mw6rKq7CNQon6ngh9wsSgOStTOeRaI13pKxSBm4OsKPMsxfMqmcUNhEQ==",
+      "type": "package",
+      "path": "amazon.lambda.serialization.json/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "amazon.lambda.serialization.json.2.0.0.nupkg.sha512",
+        "amazon.lambda.serialization.json.nuspec",
+        "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll",
+        "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.xml"
       ]
     },
     "Amazon.Lambda.Serialization.SystemTextJson/2.2.0": {
@@ -2576,10 +2632,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.2": {
-      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2602,8 +2658,74 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "PhantomJS/2.1.1": {
+      "sha512": "31xkN06TjBGQ9/8sGkm8IAN4DM/gMDChryu9Pp1ng9OK/xLPL2ZNbAgRCaB2g9vDkUDvhHjBEtP9JRenMDiHUg==",
+      "type": "package",
+      "path": "phantomjs/2.1.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/phantomjs-license.txt",
+        "phantomjs.2.1.1.nupkg.sha512",
+        "phantomjs.nuspec",
+        "tools/install.ps1",
+        "tools/phantomjs/ChangeLog",
+        "tools/phantomjs/LICENSE.BSD",
+        "tools/phantomjs/README.md",
+        "tools/phantomjs/examples/arguments.js",
+        "tools/phantomjs/examples/child_process-examples.js",
+        "tools/phantomjs/examples/colorwheel.js",
+        "tools/phantomjs/examples/countdown.js",
+        "tools/phantomjs/examples/detectsniff.js",
+        "tools/phantomjs/examples/echoToFile.js",
+        "tools/phantomjs/examples/features.js",
+        "tools/phantomjs/examples/fibo.js",
+        "tools/phantomjs/examples/hello.js",
+        "tools/phantomjs/examples/injectme.js",
+        "tools/phantomjs/examples/loadspeed.js",
+        "tools/phantomjs/examples/loadurlwithoutcss.js",
+        "tools/phantomjs/examples/modernizr.js",
+        "tools/phantomjs/examples/module.js",
+        "tools/phantomjs/examples/netlog.js",
+        "tools/phantomjs/examples/netsniff.js",
+        "tools/phantomjs/examples/openurlwithproxy.js",
+        "tools/phantomjs/examples/outputEncoding.js",
+        "tools/phantomjs/examples/page_events.js",
+        "tools/phantomjs/examples/pagecallback.js",
+        "tools/phantomjs/examples/phantomwebintro.js",
+        "tools/phantomjs/examples/post.js",
+        "tools/phantomjs/examples/postjson.js",
+        "tools/phantomjs/examples/postserver.js",
+        "tools/phantomjs/examples/printenv.js",
+        "tools/phantomjs/examples/printheaderfooter.js",
+        "tools/phantomjs/examples/printmargins.js",
+        "tools/phantomjs/examples/rasterize.js",
+        "tools/phantomjs/examples/render_multi_url.js",
+        "tools/phantomjs/examples/responsive-screenshot.js",
+        "tools/phantomjs/examples/run-jasmine.js",
+        "tools/phantomjs/examples/run-jasmine2.js",
+        "tools/phantomjs/examples/run-qunit.js",
+        "tools/phantomjs/examples/scandir.js",
+        "tools/phantomjs/examples/server.js",
+        "tools/phantomjs/examples/serverkeepalive.js",
+        "tools/phantomjs/examples/simpleserver.js",
+        "tools/phantomjs/examples/sleepsort.js",
+        "tools/phantomjs/examples/stdin-stdout-stderr.js",
+        "tools/phantomjs/examples/universe.js",
+        "tools/phantomjs/examples/unrandomize.js",
+        "tools/phantomjs/examples/useragent.js",
+        "tools/phantomjs/examples/version.js",
+        "tools/phantomjs/examples/waitfor.js",
+        "tools/phantomjs/examples/walk_through_frames.js",
+        "tools/phantomjs/phantomjs.exe",
+        "tools/phantomjs/third-party.txt",
+        "tools/uninstall.ps1"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -2828,6 +2950,56 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "Selenium.PhantomJS.WebDriver/2.1.1": {
+      "sha512": "RkbBQqVh47WZWQjwl5iM/FFzY6ST89w9Pts31Vft36H/10gCLipRoSsM/ewkSm8EUWibagOVyAOQDqsL5RSzhw==",
+      "type": "package",
+      "path": "selenium.phantomjs.webdriver/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Selenium.PhantomJS.WebDriver.targets",
+        "driver/phantomjs.exe",
+        "selenium.phantomjs.webdriver.2.1.1.nupkg.sha512",
+        "selenium.phantomjs.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver/4.1.0": {
+      "sha512": "d4smisz4a/wJCM2TzkKTl+BLfvZUTvaobhKElDfCVZlvY8ThsC8VAoBNWTlg1H/GGzIP//yVGko/W0FILTgkYA==",
+      "type": "package",
+      "path": "selenium.webdriver/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/icon.png",
+        "lib/net45/WebDriver.dll",
+        "lib/net46/WebDriver.dll",
+        "lib/net47/WebDriver.dll",
+        "lib/net48/WebDriver.dll",
+        "lib/net5.0/WebDriver.dll",
+        "lib/netstandard2.0/WebDriver.dll",
+        "lib/netstandard2.1/WebDriver.dll",
+        "selenium.webdriver.4.1.0.nupkg.sha512",
+        "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.ChromeDriver/97.0.4692.7100": {
+      "sha512": "/5wf4Rv9vTmab2qWo3enuYLoumOyVb6+rO0f2hbym+MQzDGYb7GpadhWk/jgNtUf6eFvsqL90TyzXrcCfOhCyQ==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/97.0.4692.7100",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.97.0.4692.7100.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -6917,6 +7089,10 @@
       "Amazon.Lambda.Core >= 2.1.0",
       "Amazon.Lambda.TestUtilities >= 2.0.0",
       "Microsoft.NET.Test.Sdk >= 15.5.0",
+      "PhantomJS >= 2.1.1",
+      "Selenium.PhantomJS.WebDriver >= 2.1.1",
+      "Selenium.WebDriver >= 4.1.0",
+      "Selenium.WebDriver.ChromeDriver >= 97.0.4692.7100",
       "xunit >= 2.3.1",
       "xunit.runner.visualstudio >= 2.3.1"
     ]
@@ -6980,6 +7156,22 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[15.5.0, )"
+          },
+          "PhantomJS": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
+          "Selenium.PhantomJS.WebDriver": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
+          "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[97.0.4692.7100, )"
           },
           "xunit": {
             "target": "Package",
