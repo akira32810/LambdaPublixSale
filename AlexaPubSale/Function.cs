@@ -1,14 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Amazon.Lambda.Core;
 using Alexa.NET.Response;
 using Alexa.NET.Request;
 using Alexa.NET.Request.Type;
 using Newtonsoft.Json;
 using Alexa.NET;
-using System.Text.RegularExpressions;
 using System.Net;
 using System.IO;
 using System.Text;
@@ -20,7 +18,7 @@ namespace AlexaPubSale
 {
     public class Function
     {
-
+         
         public SkillResponse FunctionHandler(SkillRequest input, ILambdaContext context)
         {
             SubSaleData.Root subsale = JsonConvert.DeserializeObject<SubSaleData.Root>(SubInfo());
