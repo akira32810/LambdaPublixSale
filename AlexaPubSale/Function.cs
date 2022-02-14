@@ -103,6 +103,8 @@ namespace AlexaPubSale
             httpRequest.Method = "POST";
 
             httpRequest.Headers["publixstore"] = "1158";
+            httpRequest.Headers["UseDefaultCredentials"] = "true";
+            httpRequest.Headers["UserAgent"] = "Mozilla / 5.0(Windows NT 10.0; Win64; x64) AppleWebKit / 537.36(KHTML, like Gecko) Chrome / 98.0.4758.87 Safari / 537.36";
             httpRequest.ContentType = "application/json";
 
             var data = @"{
