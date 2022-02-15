@@ -137,12 +137,12 @@ namespace AlexaPubSale
             }
 
             // Console.WriteLine(httpResponse.StatusCode);
-
+ 
 
 
             return subdata;
         }
 
-
+         
     }
 }
